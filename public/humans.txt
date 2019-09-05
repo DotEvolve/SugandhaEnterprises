@@ -1,0 +1,13 @@
+/* TEAM */
+	Developer: Mohd Sadiq
+	Contact: hello [at] saifryzwi.me
+	Twitter: @saifryzwi
+	From: Lucknow, UP, India
+
+/* THANKS */
+
+/* SITE */
+	Last update:2018/03/23
+	Language: English
+	Doctype: HTML5
+	IDE: Brackets

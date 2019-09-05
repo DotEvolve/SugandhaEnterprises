@@ -1,0 +1,26 @@
+{
+    "short_name": "Sugandha Enterprises",
+    "name": "Sugandha Enterprises",
+    "icons": [
+        {
+            "src": "images/logo/launcher-icon-1x.png",
+            "type": "image/png",
+            "sizes": "48x48"
+      },
+        {
+            "src": "images/logo/launcher-icon-2x.png",
+            "type": "image/png",
+            "sizes": "96x96"
+      },
+        {
+            "src": "images/logo/launcher-icon-4x.png",
+            "type": "image/png",
+            "sizes": "192x192"
+      }
+    ],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#be3a31",
+    "theme_color": "#18bc9c",
+    "display": "browser",
+    "orientation": "portrait"
+}

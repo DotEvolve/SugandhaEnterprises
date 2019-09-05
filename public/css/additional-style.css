@@ -1,0 +1,359 @@
+.banner-below-section ul li.li-col-2 {
+    width: 66.66666666666%;
+}
+
+/*.banner-below-section ul .post-entry{
+    max-height: 420px;
+    min-height: 420px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}*/
+
+.banner-below-section ul li.li-col-2 .post-entry {
+    background-image: url(../images/img-1.jpg);
+}
+
+.banner-below-section ul li.last-col .post-entry {
+    background-image: url(../images/img-3.jpg);
+}
+
+.navbar-default .navbar-nav > li.giving-menu-item > a {
+    background: #a53c36;
+    color: #fff;
+    color: #fff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.navbar-default .navbar-nav > li.giving-menu-item > a:before {
+    display: none;
+}
+
+ul.internal-links .active {
+    background: #ccc;
+}
+
+@media (min-width: 761px) {
+    #desktop {
+        display: block;
+    }
+    #mobile_view {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    #desktop {
+        display: none;
+    }
+    #mobile_view {
+        display: block;
+    }
+    .col-xs-6 {
+        width: 50%;
+        float: left;
+    }
+}
+
+.program_link {
+    color: #000;
+    text-decoration: none;
+}
+
+.program_link:hover {
+    text-decoration: none;
+}
+
+.add_class a {
+    background: #be3a31 !important;
+    padding: 12px 30px!important;
+    border-radius: 30px !important;
+    color: #fff !important;
+}
+
+.add_class a:hover {
+    border-bottom: none !important;
+    background: #be3a31 !important;
+}
+
+.navbar-default .navbar-nav > .add_class > a:before {
+    background-color: transparent;
+}
+
+.banner-below-section ul .post-entry .overlay.black h3:after {
+    background-color: #fff;
+}
+
+.banner-below-section ul .post-entry .overlay.black h3 {
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+}
+
+.banner-section h1 span {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .first_head {
+        font-size: 24px!important;
+    }
+}
+
+@media only screen and (max-width: 567px) and (min-width: 320px) {
+    .first_head {
+        font-size: 14px!important;
+    }
+    .first_second {
+        font-size: 15px!important;
+    }
+}
+
+@media only screen and (max-width: 1399px) and (min-width: 992px) {
+    .first_head {
+        font-size: 22px!important;
+    }
+}
+
+.banner-section .first_head {
+    font-size: 35px;
+    margin: 0px;
+}
+
+@media only screen and (min-width: 992px) {
+    .add_class {
+        padding: 0px 15px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .add_class {
+        padding: 0px 15px;
+        text-align: center;
+    }
+    .add_class a {
+        width: 100px;
+    }
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: #be3a31;
+    color: #222;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+.post_img {
+    text-align: center;
+    padding: 15px;
+}
+
+.call-to-action {
+    padding: 32px 0;
+}
+
+.cord_btn {
+    padding: 10px 0px;
+}
+
+#oddg,
+#oddh,
+#odds {
+    position: absolute;
+    right: 34%;
+}
+
+.banner-below-section ul .post-entry .overlay.yellow h3:after {
+    background-color: #222;
+}
+
+.banner-below-section ul .post-entry .overlay.yellow h3 {
+    color: #222;
+}
+
+.banner-below-section ul .post-entry .overlay.yellow p {
+    color: #222;
+}
+
+.banner-below-section ul .post-entry h3 {
+    line-height: 1.4;
+}
+
+#footer .footer-widget h4.widget-title:before {
+    background-color: #be3a31;
+}
+
+#footer .subscribe-form .form-control {
+    font-size: 12px;
+}
+
+.news-submit {
+    background-color: #be3a31;
+}
+
+.last_section_content p {
+    color: #fff;
+    font-size: 22px;
+    line-height: 38px;
+    font-weight: 700;
+    padding: 0px;
+    text-align: center;
+}
+
+.gensis_section_block blockquote::before,
+.gensis_section_block blockquote::after {
+    font-size: 126px;
+}
+
+@media only screen and (max-width: 991px) {
+    .over {
+        display: block;
+    }
+    .journey {
+        border: 1px solid #fff;
+    }
+    .block_diff {
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .call-to-action h3 {
+        font-size: 22px;
+    }
+    .over {
+        display: none;
+    }
+    .block_diff2 {
+        padding-left: 150px;
+    }
+}
+
+.programmers_section .parallax:before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#oddg,
+#oddh,
+#odds {
+    bottom: 6%;
+}
+
+.gensis_section_block blockquote {
+    background: #fff;
+    color: #222;
+    padding: 40px 0px;
+}
+
+.gensis_section_block blockquote::before,
+.gensis_section_block blockquote::after {
+    font-size: 113px;
+}
+
+.head_gene {
+    text-align: center;
+    display: block;
+    font-weight: 800;
+    color: #be3a31;
+    font-size: 23px;
+    padding: 49px;
+}
+
+.cord_btn {
+    padding: 19px 0px 0px;
+}
+
+.add_slide {
+    top: 18%;
+}
+
+.grids_section {
+    background: #333333;
+}
+
+.grids_section .title_girds p {
+    color: #fff;
+}
+
+.last_section .btn-last-section {
+    background-color: #fff!important;
+    color: #222!important;
+    border: #222!important;
+}
+
+.binta_devi_content {
+    padding: 15px 0px;
+}
+
+.banner-section .btn {
+    margin-top: 35px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 567px) {
+    .head_gene {
+        font-size: 18px!important;
+    }
+    .last_section_content p {
+        font-size: 17px!important;
+        line-height: 28px!important;
+    }
+}
+
+.last_section .v h3 {
+    color: #be3a31 !important;
+}
+
+@media only screen and (max-width: 1399px) and (min-width: 992px) {
+    .banner-section .first_head {
+        font-size: 28px!important;
+        margin-bottom: 5px;
+    }
+    #oddg,
+    #oddh,
+    #odds {
+        right: 27%!important;
+        bottom: 3%!important;
+    }
+    .banner-section .first_second {
+        font-size: 34px!important;
+        line-height: 38px!important;
+    }
+    .banner-below-section ul .post-entry .overlay.yellow p,
+    .banner-below-section ul .post-entry .overlay.black p {
+        line-height: 1.6;
+    }
+}
+
+.banner-section .first_second span {
+    text-shadow: 1.5px 1.5px #be3a31;
+}
+
+.grids_block .grids_content {
+    min-height: 334px;
+}
+
+.yellow-box-header {
+    background: #be3a31;
+    padding: 15px 15px 10px;
+    text-align: left;
+}
+
+.yellow-box-header p {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.8;
+}
