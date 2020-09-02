@@ -1,13 +1,16 @@
 /* TEAM */
-	Developer: Mohd Sadiq
-	Contact: hello [at] saifryzwi.me
-	Twitter: @saifryzwi
+	Developer: DotEvolve
+	Contact: info [at] DotEvolve.co.in
+	Twitter: @DotEvolve
 	From: Lucknow, UP, India
 
 /* THANKS */
+    Name: Mohd Sadiq
 
 /* SITE */
-	Last update:2018/03/23
+	Last update:2020/09/02
 	Language: English
+	Standards: HTML5, CSS3, JS
+    Components: jQuery
 	Doctype: HTML5
-	IDE: Brackets
+	IDE: WebStorm
