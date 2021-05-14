@@ -342,10 +342,6 @@
                                             <form>
                                                 <select name="year" id="year">
                                                     <option value="0000">Year</option>
-                                                    <option value="2017">2017</option>
-                                                    <option value="2018">2018</option>
-                                                    <option value="2019">2019</option>
-                                                    <option value="2020">2020</option>
                                                 </select>
                                                 <select name="month" id="month">
                                                     <option value="00">Month</option>
@@ -484,7 +480,18 @@
 <script src="/__/firebase/init.js"></script>
 
 <script>
-    const perf = firebase.performance();
+    window.onload = function() {
+        const today_date = new Date();
+        const current_year = today_date.getFullYear();
+
+        for (let i = 2017; i <= current_year; i++) {
+            const select_year = document.getElementById("year");
+            const option_year = document.createElement("option");
+            option_year.text = i.toString();
+            option_year.value = i.toString();
+            select_year.add(option_year, i);
+        }
+    };
 
     const storage = firebase.storage();
 
