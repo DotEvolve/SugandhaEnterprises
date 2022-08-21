@@ -484,7 +484,7 @@
         const today_date = new Date();
         const current_year = today_date.getFullYear();
 
-        for (let i = 2017; i <= current_year; i++) {
+        for (let i = current_year; i >= current_year - 2; i--) {
             const select_year = document.getElementById("year");
             const option_year = document.createElement("option");
             option_year.text = i.toString();
