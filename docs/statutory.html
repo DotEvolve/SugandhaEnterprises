@@ -345,18 +345,6 @@
                                                 </select>
                                                 <select name="month" id="month">
                                                     <option value="00">Month</option>
-                                                    <option value="01">January</option>
-                                                    <option value="02">February</option>
-                                                    <option value="03">March</option>
-                                                    <option value="04">April</option>
-                                                    <option value="05">May</option>
-                                                    <option value="06">June</option>
-                                                    <option value="07">July</option>
-                                                    <option value="08">August</option>
-                                                    <option value="09">September</option>
-                                                    <option value="10">October</option>
-                                                    <option value="11">November</option>
-                                                    <option value="12">December</option>
                                                 </select>
                                             </form>
                                             <div class="table-responsive">
@@ -481,8 +469,31 @@
 
 <script>
     window.onload = function() {
-        const today_date = new Date();
-        const current_year = today_date.getFullYear();
+        loadYears();
+    };
+
+    const monthsOfYear = ["",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
+
+    const today_date = new Date();
+    const current_year = today_date.getFullYear();
+    const current_month = today_date.getMonth() + 1;
+
+    const storage = firebase.storage();
+
+    function loadYears() {
 
         for (let i = current_year; i >= current_year - 2; i--) {
             const select_year = document.getElementById("year");
@@ -491,9 +502,47 @@
             option_year.value = i.toString();
             select_year.add(option_year, i);
         }
-    };
+    }
 
-    const storage = firebase.storage();
+    function loadMonths() {
+        document.querySelector('#month').innerHTML = '';
+
+        const select_month = document.getElementById("month");
+
+        const option_month = document.createElement("option");
+        option_month.text = "Month";
+        option_month.value = "00";
+        select_month.add(option_month, 0);
+
+        const selected_year = document.getElementById("year").value;
+        const selected_month = document.getElementById("month");
+
+        let start_month = 1;
+        let till_month = 12;
+
+        if (selected_year == current_year) {
+            till_month = current_month;
+        }
+
+        if (selected_year == current_year - 2) {
+            start_month = current_month;
+        }
+
+        console.log(start_month);
+        console.log(till_month);
+
+        for (i = start_month; i <= till_month; i++) {
+            const option_month = document.createElement("option");
+            option_month.text = monthsOfYear[i].toString();
+            option_month.value = String(i).padStart(2, '0');
+            select_month.add(option_month, i);
+        }
+    }
+
+    function onYearChange() {
+        loadMonths();
+        toUpdateUrl();
+    }
 
     function toUpdateUrl() {
         const year = document.getElementById("year").value;
@@ -514,13 +563,11 @@
         const year = document.getElementById("year").value;
         const month = document.getElementById("month").value;
 
-        const monthOfYear = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        const epfChallanPath = 'statutory/' + year + '/' + month + '/EPF-Challan-' + monthOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const epfEcrPath = 'statutory/' + year + '/' + month + '/EPF-ECR-' + monthOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const esicChallanPath = 'statutory/' + year + '/' + month + '/ESIC-Challan-' + monthOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const esicEcrPath = 'statutory/' + year + '/' + month + '/ESIC-ECR-' + monthOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const tpddlWagePath = 'statutory/' + year + '/' + month + '/TPDDL-Wage-' + monthOfYear[parseInt(month)] + '-' + year + '.pdf';
+        const epfChallanPath = 'statutory/' + year + '/' + month + '/EPF-Challan-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
+        const epfEcrPath = 'statutory/' + year + '/' + month + '/EPF-ECR-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
+        const esicChallanPath = 'statutory/' + year + '/' + month + '/ESIC-Challan-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
+        const esicEcrPath = 'statutory/' + year + '/' + month + '/ESIC-ECR-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
+        const tpddlWagePath = 'statutory/' + year + '/' + month + '/TPDDL-Wage-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
 
         const epfChallanRef = storage.ref(epfChallanPath);
         const epfEcrRef = storage.ref(epfEcrPath);
@@ -652,7 +699,7 @@
         });
     }
 
-    document.getElementById('year').addEventListener('change', toUpdateUrl);
+    document.getElementById('year').addEventListener('change', onYearChange);
     document.getElementById('month').addEventListener('change', toUpdateUrl);
 </script>
 <!-- Firebase End -->
