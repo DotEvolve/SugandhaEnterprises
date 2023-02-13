@@ -17,5 +17,3 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SUGANDHA_ENTERPRISES }}'
           channelId: live
           projectId: sugandha-enterprises
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels

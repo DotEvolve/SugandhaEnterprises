@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "docs",
+    "public": "public",
     "ignore": [
         "desktop.ini",
         "firebase.json",
