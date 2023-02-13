@@ -1,6 +1,6 @@
 /* TEAM */
 	Developer: DotEvolve
-	Contact: info [at] DotEvolve.co.in
+	Contact: info [at] DotEvolve.net
 	Twitter: @DotEvolve
 	From: Lucknow, UP, India
 
