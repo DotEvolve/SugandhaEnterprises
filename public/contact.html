@@ -11,6 +11,8 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="./images/logo/logo-265.png">
+        <meta name="description"
+          content="Sugandha Enterprises (SE), established in 1993, is an engineering and contracting firm specializing in electrical, mechanical, and civil projects, sub-stations, and underground EHV transmission cable laying."/>
     <meta property="og:description"
           content="Sugandha Enterprises (SE), a proprietorship firm was established in 1993 as contractor & engineering firm deals in the verticals of electrical, mechanical & civil projects and is known for its quality, commitment and consistency in performance.">
     <meta property="og:title" content="Sugandha Enterprises">
@@ -38,9 +40,6 @@
     <link rel='stylesheet' href='css/additional-style.css' type='text/css' media='all'/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <script type='text/javascript' src='js/jquery/jquery.js'></script>
-    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
-
     <link rel="icon" href="./images/logo/launcher-icon-4x.png" sizes="192x192"/>
     <link rel="apple-touch-icon-precomposed" href="./images/logo/launcher-icon-4x.png"/>
 
@@ -50,21 +49,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114670531-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'UA-114670531-1');
-
-    </script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -95,7 +79,7 @@
             style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -118,7 +102,7 @@
                         <picture>
                             <source type="image/avif" srcset="./images/logo.avif">
                             <source type="image/webp" srcset="./images/logo.webp">
-                            <img src="./images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="150" height="150"/>
+                            <img src="./images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="50" height="50"/>
                         </picture>
                     </a>
 
@@ -153,7 +137,7 @@
                                 title="Contact Us" href="./contact.html">Contact Us</a>&nbsp;&nbsp;
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                            <a title="Login" target="_blank" href="https://mail.google.com/a/sugandhaenterprises.com">Login</a>&nbsp;&nbsp;
+                            <a title="Login" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/a/sugandhaenterprises.com">Login</a>&nbsp;&nbsp;
                         </li>
                     </ul>
                 </div>
@@ -162,6 +146,9 @@
 
 
     </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main">
     <!-- Header End -->
     <!-- Page Header -->
     <section class="page-header">
@@ -208,6 +195,9 @@
     <!-- Footer -->
 
     <!-- Footer -->
+        </main>
+    <!-- Main Content Landmark End -->
+
     <footer id="footer">
         <div class="copyright-footer">
             <div class="container">
@@ -220,10 +210,10 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="social-links">
-                            <a href="https://www.facebook.com/SugandhaLLC" target="_blank"><i
+                            <a href="https://www.facebook.com/SugandhaLLC" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                                     class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/SugandhaLLC" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/sugandha-enterprises/" target="_blank"><i
+                            <a href="https://twitter.com/SugandhaLLC" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/sugandha-enterprises/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                                     class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
@@ -250,9 +240,10 @@
 </script>
 <!-- Firebase End -->
 
+<script src="./libs/jquery/3.2.1/jquery.min.js"></script>
 <script type='text/javascript' src='./js/all.min.js?ver=1.1.1'></script>
 <script type='text/javascript' src='./js/wp-embed.min.js?ver=4.7.8'></script>
-<script src="./libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);

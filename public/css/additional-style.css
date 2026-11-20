@@ -371,7 +371,61 @@ picture img {
 
 .navbar-brand picture {
     display: inline-block;
+    vertical-align: middle;
 }
+
+.navbar-brand picture img,
+.navbar-brand img {
+    display: block;
+    width: auto;
+}
+
+/* Desktop navbar logo */
+@media (min-width: 992px) {
+    .navbar-brand.mobile-logo,
+    .navbar-default .navbar-brand.mobile-logo,
+    a.mobile-logo {
+        display: none !important;
+    }
+    .navbar-brand.desktop,
+    .navbar-default .navbar-brand.desktop {
+        display: inline-block !important;
+    }
+    .navbar-brand.desktop picture img,
+    .navbar-brand.desktop img,
+    img.desktop-logo {
+        height: 96px !important;
+        width: auto !important;
+    }
+}
+
+/* Mobile & Tablet navbar logo (<= 991px) */
+@media (max-width: 991px) {
+    .navbar-brand.desktop,
+    .navbar-default .navbar-brand.desktop,
+    a.desktop {
+        display: none !important;
+    }
+    .navbar-brand.mobile-logo,
+    .navbar-default .navbar-brand.mobile-logo,
+    a.mobile-logo {
+        display: inline-block !important;
+        height: 80px !important;
+        padding: 15px 15px !important;
+        margin-top: 0 !important;
+    }
+    .navbar-brand.mobile-logo picture,
+    .navbar-brand.mobile-logo picture img,
+    .navbar-brand.mobile-logo img,
+    img.mobile-logo {
+        height: 50px !important;
+        width: 50px !important;
+        max-height: 50px !important;
+        max-width: 50px !important;
+        object-fit: contain;
+    }
+}
+
 
 /* Modern responsive format background images */
 .banner-section .slide-item.slide-1 {
@@ -397,4 +451,34 @@ picture img {
     background-image: -webkit-image-set(url("../images/cable.avif") type("image/avif"), url("../images/cable.webp") type("image/webp"), url("../images/cable.jpg") type("image/jpeg"));
     background-image: image-set(url("../images/cable.avif") type("image/avif"), url("../images/cable.webp") type("image/webp"), url("../images/cable.jpg") type("image/jpeg"));
 }
+
+/* Prevent layout shift (CLS) for banner slider */
+.banner-section {
+    min-height: 480px;
+}
+.banner-section .slide-item {
+    min-height: 480px;
+}
+@media (min-width: 768px) {
+    .banner-section,
+    .banner-section .slide-item {
+        min-height: 580px;
+    }
+}
+
+/* Accessibility: Color Contrast AA Enhancements */
+.binta_devi_content p,
+.gensis_section_block p,
+.gensis_section_block blockquote {
+    color: #444444 !important;
+}
+
+.stories-of-change p.block_diff {
+    color: #ffffff !important;
+}
+
+.yellow-box-header p {
+    color: #ffffff !important;
+}
+
 

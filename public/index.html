@@ -11,6 +11,8 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="./images/logo/logo-265.png">
+        <meta name="description"
+          content="Sugandha Enterprises (SE), established in 1993, is an engineering and contracting firm specializing in electrical, mechanical, and civil projects, sub-stations, and underground EHV transmission cable laying."/>
     <meta property="og:description"
           content="Sugandha Enterprises, a proprietorship firm was established in 1993 as contractor & engineering firm deals in the verticals of electrical, mechanical & civil projects and is known for its quality, commitment and consistency in performance.">
     <meta property="og:title" content="Sugandha Enterprises">
@@ -31,15 +33,13 @@
     <link rel="author" href="./humans.txt"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="images/slide-1.avif" type="image/avif" fetchpriority="high">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin,latin-ext&amp;display=swap"
           type="text/css" media="all"/>
     <link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/additional-style.css' type='text/css' media='all'/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <script type='text/javascript' src='js/jquery/jquery.js'></script>
-    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
 
     <link rel="icon" href="./images/logo/launcher-icon-4x.png" sizes="192x192"/>
     <link rel="apple-touch-icon-precomposed" href="./images/logo/launcher-icon-4x.png"/>
@@ -50,21 +50,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114670531-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'UA-114670531-1');
-
-    </script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -96,7 +81,7 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 <!-- Loader -->
 <div id="loading" class="loading-layer">
@@ -133,7 +118,7 @@
                         <picture>
                             <source type="image/avif" srcset="images/logo.avif">
                             <source type="image/webp" srcset="images/logo.webp">
-                            <img src="images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="150" height="150"/>
+                            <img src="images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="50" height="50"/>
                         </picture>
                     </a>
 
@@ -170,7 +155,7 @@
                             Us</a>&nbsp;&nbsp;
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                            <a title="Login" target="_blank" href="https://mail.google.com/a/sugandhaenterprises.com">Login</a>&nbsp;&nbsp;
+                            <a title="Login" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/a/sugandhaenterprises.com">Login</a>&nbsp;&nbsp;
                         </li>
                     </ul>
                 </div>
@@ -178,6 +163,9 @@
         </nav>
 
     </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main">
     <!-- Banner Section -->
     <section class="banner-section">
         <div id="banner-slider" class="owl-carousel owl-theme">
@@ -483,6 +471,9 @@
     </style>
 
     <!-- Footer -->
+        </main>
+    <!-- Main Content Landmark End -->
+
     <footer id="footer">
         <div class="copyright-footer">
             <div class="container">
@@ -495,10 +486,10 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="social-links">
-                            <a href="https://www.facebook.com/SugandhaLLC" target="_blank"><i
+                            <a href="https://www.facebook.com/SugandhaLLC" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                                     class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/SugandhaLLC" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/sugandha-enterprises/" target="_blank"><i
+                            <a href="https://twitter.com/SugandhaLLC" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/sugandha-enterprises/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                                     class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
@@ -516,7 +507,6 @@
 <script src="/__/firebase/8.6.1/firebase-app.js"></script>
 
 <script src="/__/firebase/8.6.1/firebase-performance.js"></script>
-<script src="/__/firebase/8.6.1/firebase-storage.js"></script>
 
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
@@ -524,68 +514,13 @@
 <script>
     const perf = firebase.performance();
 
-    var storage = firebase.storage();
-    var storageRef = storage.ref();
-
-    var ehsPlanPath = 'profile/EHS-Plan.pdf';
-    var equipmentsPath = 'profile/Equipment-List.pdf';
-    var milestonesPath = 'profile/Milestones-Achieved.pdf';
-    var profilePath = 'profile/SE_Profile.pdf';
-    var certificatesPath = 'profile/Work-Completion-Certificates.pdf';
-
-    var ehsPlanRef = storage.ref(ehsPlanPath);
-    var equipmentsRef = storage.ref(equipmentsPath);
-    var milestonesRef = storage.ref(milestonesPath);
-    var profileRef = storage.ref(profilePath);
-    var certificatesRef = storage.ref(certificatesPath);
-
-    ehsPlanRef.getDownloadURL().then(function (url) {
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'blob';
-        xhr.onload = function (event) {
-            const blob = xhr.response;
-        };
-        xhr.open('GET', url);
-        xhr.send();
-
-        const doc = document.getElementById('ehsPlan');
-        doc.href = url;
-    }).catch(function (error) {
-    });
-
-    milestonesRef.getDownloadURL().then(function (url) {
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'blob';
-        xhr.onload = function (event) {
-            const blob = xhr.response;
-        };
-        xhr.open('GET', url);
-        xhr.send();
-
-        const doc = document.getElementById('milestones');
-        doc.href = url;
-    }).catch(function (error) {
-    });
-
-    profileRef.getDownloadURL().then(function (url) {
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'blob';
-        xhr.onload = function (event) {
-            const blob = xhr.response;
-        };
-        xhr.open('GET', url);
-        xhr.send();
-
-        const doc = document.getElementById('profile');
-        doc.href = url;
-    }).catch(function (error) {
-    });
-</script>
+    </script>
 <!-- Firebase End -->
 
+<script src="./libs/jquery/3.2.1/jquery.min.js"></script>
 <script type='text/javascript' src='./js/all.min.js'></script>
 <script type='text/javascript' src='./js/wp-embed.min.js'></script>
-<script src="./libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);
