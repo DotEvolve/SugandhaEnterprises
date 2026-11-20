@@ -217,7 +217,7 @@
                     <picture>
                         <source type="image/avif" srcset="images/about-1.avif">
                         <source type="image/webp" srcset="images/about-1.webp">
-                        <img src="images/about-1.jpg" alt="Empowerment at Sugandha Enterprises" width="432" height="284" loading="lazy" decoding="async"/>
+                        <img src="images/about-1.jpg" alt="Empowerment at Sugandha Enterprises" width="864" height="568" loading="lazy" decoding="async"/>
                     </picture>
                 </article>
             </li>
@@ -236,7 +236,7 @@
                     <picture>
                         <source type="image/avif" srcset="images/about-2.avif">
                         <source type="image/webp" srcset="images/about-2.webp">
-                        <img src="images/about-2.jpg" alt="Our Vision - Specialists of Underground EHV Transmission" width="432" height="284" loading="lazy" decoding="async"/>
+                        <img src="images/about-2.jpg" alt="Our Vision - Specialists of Underground EHV Transmission" width="864" height="568" loading="lazy" decoding="async"/>
                     </picture>
                 </article>
             </li>
@@ -259,7 +259,7 @@
                     <picture>
                         <source type="image/avif" srcset="images/about-3.avif">
                         <source type="image/webp" srcset="images/about-3.webp">
-                        <img src="images/about-3.jpg" alt="Winning Against All Odds - Sugandha Enterprises" width="432" height="284" loading="lazy" decoding="async"/>
+                        <img src="images/about-3.jpg" alt="Winning Against All Odds - Sugandha Enterprises" width="864" height="568" loading="lazy" decoding="async"/>
                     </picture>
                 </article>
             </li>
@@ -513,9 +513,21 @@
 <!-- Firebase End -->
 
 <script src="./libs/jquery/3.2.1/jquery.min.js"></script>
-<script type='text/javascript' src='./js/all.min.js'></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/owl.carousel.min.js"></script>
 
 <script type="text/javascript">
+    
+    if ($.fn.owlCarousel) {
+        $("#banner-slider").owlCarousel({
+            autoplay: true,
+            items: 1,
+            loop: true,
+            nav: false,
+            dots: true
+        });
+    }
+    
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);
     }, function () {
