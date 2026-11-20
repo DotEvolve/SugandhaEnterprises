@@ -29,10 +29,11 @@
     <title>Our Clients</title>
     <link rel="manifest" href="./manifest.json">
     <link rel="author" href="./humans.txt"/>
-    <link rel='dns-prefetch' href='http://fonts.googleapis.com/'/>
-    <link rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C800%2C800i&amp;subset=latin%2Clatin-ext'
-          type='text/css' media='all'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin,latin-ext&amp;display=swap"
+          type="text/css" media="all"/>
     <link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/additional-style.css' type='text/css' media='all'/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -115,7 +116,11 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand mobile-logo" href=".">
-                        <img src="./images/logo.png" alt="Logo" class="mobile-logo"/>
+                        <picture>
+                            <source type="image/avif" srcset="./images/logo.avif">
+                            <source type="image/webp" srcset="./images/logo.webp">
+                            <img src="./images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="150" height="150"/>
+                        </picture>
                     </a>
                 </div>
 
@@ -132,8 +137,13 @@
                                                                                                 href="./projects.html">Projects</a>&nbsp;&nbsp;&nbsp;
                         </li>
                     </ul>
-                    <a class="navbar-brand desktop" href="."><img src="images/logo/launcher-icon-2x.png" alt="Logo"
-                                                                  class="desktop-logo"/></a>
+                    <a class="navbar-brand desktop" href=".">
+                        <picture>
+                            <source type="image/avif" srcset="images/logo/launcher-icon-2x.avif">
+                            <source type="image/webp" srcset="images/logo/launcher-icon-2x.webp">
+                            <img src="images/logo/launcher-icon-2x.png" alt="Sugandha Enterprises Logo" class="desktop-logo" width="96" height="96"/>
+                        </picture>
+                    </a>
                     <ul id="menu-right-menu" class="nav navbar-nav">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page active"><a
                                 title="Our Clients" href="clients.html">Our Clients</a>&nbsp;&nbsp;
@@ -172,178 +182,291 @@
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/hartek.webp" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/hartek.avif">
+                                <source type="image/webp" srcset="./images/clients/hartek.webp">
+                                <img src="./images/clients/hartek.jpg" class="vc_single_image-img attachment-full" alt="Hartek Power" width="400" height="400" fetchpriority="high" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/tpcodl.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/tpcodl.avif">
+                                <source type="image/webp" srcset="./images/clients/tpcodl.webp">
+                                <img src="./images/clients/tpcodl.jpg" class="vc_single_image-img attachment-full" alt="TP Central Odisha Distribution Limited (TPCODL)" width="400" height="400" fetchpriority="high" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/tpnodl.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/tpnodl.avif">
+                                <source type="image/webp" srcset="./images/clients/tpnodl.webp">
+                                <img src="./images/clients/tpnodl.jpg" class="vc_single_image-img attachment-full" alt="TP Northern Odisha Distribution Limited (TPNODL)" width="400" height="400" fetchpriority="high" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/powergrid.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/powergrid.avif">
+                                <source type="image/webp" srcset="./images/clients/powergrid.webp">
+                                <img src="./images/clients/powergrid.jpg" class="vc_single_image-img attachment-full" alt="Power Grid Corporation of India" width="400" height="400" fetchpriority="high" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/havells.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/havells.avif">
+                                <source type="image/webp" srcset="./images/clients/havells.webp">
+                                <img src="./images/clients/havells.jpg" class="vc_single_image-img attachment-full" alt="Havells" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/hvpn.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/hvpn.avif">
+                                <source type="image/webp" srcset="./images/clients/hvpn.webp">
+                                <img src="./images/clients/hvpn.jpg" class="vc_single_image-img attachment-full" alt="Haryana Vidyut Prasaran Nigam (HVPN)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/dmrc.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/dmrc.avif">
+                                <source type="image/webp" srcset="./images/clients/dmrc.webp">
+                                <img src="./images/clients/dmrc.jpg" class="vc_single_image-img attachment-full" alt="Delhi Metro Rail Corporation (DMRC)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/upptcl.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/upptcl.avif">
+                                <source type="image/webp" srcset="./images/clients/upptcl.webp">
+                                <img src="./images/clients/upptcl.jpg" class="vc_single_image-img attachment-full" alt="UP Power Transmission Corporation Limited (UPPTCL)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/ndmc.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/ndmc.avif">
+                                <source type="image/webp" srcset="./images/clients/ndmc.webp">
+                                <img src="./images/clients/ndmc.jpg" class="vc_single_image-img attachment-full" alt="New Delhi Municipal Council (NDMC)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/dtl.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/dtl.avif">
+                                <source type="image/webp" srcset="./images/clients/dtl.webp">
+                                <img src="./images/clients/dtl.jpg" class="vc_single_image-img attachment-full" alt="Delhi Transco Limited (DTL)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/lscables.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/lscables.avif">
+                                <source type="image/webp" srcset="./images/clients/lscables.webp">
+                                <img src="./images/clients/lscables.jpg" class="vc_single_image-img attachment-full" alt="LS Cable & System" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/finolex.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/finolex.avif">
+                                <source type="image/webp" srcset="./images/clients/finolex.webp">
+                                <img src="./images/clients/finolex.jpg" class="vc_single_image-img attachment-full" alt="Finolex Cables" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/eta.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/eta.avif">
+                                <source type="image/webp" srcset="./images/clients/eta.webp">
+                                <img src="./images/clients/eta.jpg" class="vc_single_image-img attachment-full" alt="ETA Star" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/tpddl.jpg" class="vc_single_image-img attachment-full" alt=""/>
-                        </figure>
-                    </div>
-
-                    <div class="col-sm-3 client_content_card">
-                        <figure>
-                            <img src="./images/clients/bses.jpg" class="vc_single_image-img attachment-full" alt=""/>
-                        </figure>
-                    </div>
-
-                    <div class="col-sm-3 client_content_card">
-                        <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/kec.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/tpddl.avif">
+                                <source type="image/webp" srcset="./images/clients/tpddl.webp">
+                                <img src="./images/clients/tpddl.jpg" class="vc_single_image-img attachment-full" alt="Tata Power Delhi Distribution Limited (TPDDL)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/sterlite.jpg" class="vc_single_image-img attachment-full"
-                                 alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/bses.avif">
+                                <source type="image/webp" srcset="./images/clients/bses.webp">
+                                <img src="./images/clients/bses.jpg" class="vc_single_image-img attachment-full" alt="BSES Rajdhani Power Limited" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/cci.jpg" class="vc_single_image-img attachment-full" alt=""/>
-                        </figure>
-                    </div>
-
-                    <div class="col-sm-3 client_content_card">
-                        <figure>
-                            <img src="./images/clients/kei.jpg" class="vc_single_image-img attachment-full" alt=""/>
-                        </figure>
-                    </div>
-
-                    <div class="col-sm-3 client_content_card">
-                        <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/crompton.jpg" class="vc_single_image-img attachment-full"
-                                 alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/kec.avif">
+                                <source type="image/webp" srcset="./images/clients/kec.webp">
+                                <img src="./images/clients/kec.jpg" class="vc_single_image-img attachment-full" alt="KEC International" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/siemens.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/sterlite.avif">
+                                <source type="image/webp" srcset="./images/clients/sterlite.webp">
+                                <img src="./images/clients/sterlite.jpg" class="vc_single_image-img attachment-full" alt="Sterlite Power" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/raychem.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/cci.avif">
+                                <source type="image/webp" srcset="./images/clients/cci.webp">
+                                <img src="./images/clients/cci.jpg" class="vc_single_image-img attachment-full" alt="Cable Corporation of India (CCI)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/iocl.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/kei.avif">
+                                <source type="image/webp" srcset="./images/clients/kei.webp">
+                                <img src="./images/clients/kei.jpg" class="vc_single_image-img attachment-full" alt="KEI Industries" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/jpsi.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/crompton.avif">
+                                <source type="image/webp" srcset="./images/clients/crompton.webp">
+                                <img src="./images/clients/crompton.jpg" class="vc_single_image-img attachment-full" alt="Crompton Greaves" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/valmont.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/siemens.avif">
+                                <source type="image/webp" srcset="./images/clients/siemens.webp">
+                                <img src="./images/clients/siemens.jpg" class="vc_single_image-img attachment-full" alt="Siemens" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/reliance.jpg" class="vc_single_image-img attachment-full"
-                                 alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/raychem.avif">
+                                <source type="image/webp" srcset="./images/clients/raychem.webp">
+                                <img src="./images/clients/raychem.jpg" class="vc_single_image-img attachment-full" alt="Raychem RPG" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/atoz.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/iocl.avif">
+                                <source type="image/webp" srcset="./images/clients/iocl.webp">
+                                <img src="./images/clients/iocl.jpg" class="vc_single_image-img attachment-full" alt="Indian Oil Corporation Limited (IOCL)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/abb.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/jpsi.avif">
+                                <source type="image/webp" srcset="./images/clients/jpsi.webp">
+                                <img src="./images/clients/jpsi.jpg" class="vc_single_image-img attachment-full" alt="Jaypee Sports International (JPSI)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
                     <div class="col-sm-3 client_content_card">
                         <figure class="wpb_wrapper vc_figure">
-                            <img src="./images/clients/upl.jpg" class="vc_single_image-img attachment-full" alt=""/>
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/valmont.avif">
+                                <source type="image/webp" srcset="./images/clients/valmont.webp">
+                                <img src="./images/clients/valmont.jpg" class="vc_single_image-img attachment-full" alt="Valmont Structures" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3 client_content_card">
+                        <figure class="wpb_wrapper vc_figure">
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/reliance.avif">
+                                <source type="image/webp" srcset="./images/clients/reliance.webp">
+                                <img src="./images/clients/reliance.jpg" class="vc_single_image-img attachment-full" alt="Reliance Energy" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3 client_content_card">
+                        <figure class="wpb_wrapper vc_figure">
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/atoz.avif">
+                                <source type="image/webp" srcset="./images/clients/atoz.webp">
+                                <img src="./images/clients/atoz.jpg" class="vc_single_image-img attachment-full" alt="A to Z" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3 client_content_card">
+                        <figure class="wpb_wrapper vc_figure">
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/abb.avif">
+                                <source type="image/webp" srcset="./images/clients/abb.webp">
+                                <img src="./images/clients/abb.jpg" class="vc_single_image-img attachment-full" alt="ABB" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3 client_content_card">
+                        <figure class="wpb_wrapper vc_figure">
+                            <picture>
+                                <source type="image/avif" srcset="./images/clients/upl.avif">
+                                <source type="image/webp" srcset="./images/clients/upl.webp">
+                                <img src="./images/clients/upl.jpg" class="vc_single_image-img attachment-full" alt="United Phosphorus Limited (UPL)" width="400" height="400" loading="lazy" decoding="async"/>
+                            </picture>
                         </figure>
                     </div>
 
@@ -397,7 +520,7 @@
 <!-- Firebase End -->
 
 <script type='text/javascript' src='./js/all.min.js?ver=1.1.1'></script>
-<script type='text/javascript' src='./js/wp-embed.mine049.js?ver=4.7.8'></script>
+<script type='text/javascript' src='./js/wp-embed.min.js?ver=4.7.8'></script>
 <script src="./libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {

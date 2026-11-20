@@ -29,10 +29,11 @@
     <title>Statutory Info</title>
     <link rel="manifest" href="./manifest.json">
     <link rel="author" href="./humans.txt"/>
-    <link rel='dns-prefetch' href='http://fonts.googleapis.com/'/>
-    <link rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C800%2C800i&amp;subset=latin%2Clatin-ext'
-          type='text/css' media='all'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin,latin-ext&amp;display=swap"
+          type="text/css" media="all"/>
     <link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/additional-style.css' type='text/css' media='all'/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -128,8 +129,11 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand mobile-logo" href=".">
-
-                        <img src="./images/logo.png" alt="Logo" class="mobile-logo"/>
+                        <picture>
+                            <source type="image/avif" srcset="./images/logo.avif">
+                            <source type="image/webp" srcset="./images/logo.webp">
+                            <img src="./images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="150" height="150"/>
+                        </picture>
                     </a>
 
                 </div>
@@ -146,8 +150,13 @@
                                                                                                 href="./projects.html">Projects</a>&nbsp;&nbsp;&nbsp;
                         </li>
                     </ul>
-                    <a class="navbar-brand desktop" href="."><img src="images/logo/launcher-icon-2x.png" alt="Logo"
-                                                                  class="desktop-logo"/></a>
+                    <a class="navbar-brand desktop" href=".">
+                        <picture>
+                            <source type="image/avif" srcset="images/logo/launcher-icon-2x.avif">
+                            <source type="image/webp" srcset="images/logo/launcher-icon-2x.webp">
+                            <img src="images/logo/launcher-icon-2x.png" alt="Sugandha Enterprises Logo" class="desktop-logo" width="96" height="96"/>
+                        </picture>
+                    </a>
                     <ul id="menu-right-menu" class="nav navbar-nav">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a title="Our Clients"
                                                                                                 href="clients.html">Our

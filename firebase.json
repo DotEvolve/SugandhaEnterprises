@@ -9,16 +9,28 @@
     ],
     "headers": [
       {
-        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-        "headers": [{
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }]
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
       }, {
-        "source": "**/*.@(jpg|jpeg|gif|png|css|js)",
+        "source": "**/*.@(jpg|jpeg|gif|png|webp|avif|svg|ico)",
         "headers": [{
           "key": "Cache-Control",
-          "value": "max-age=7200"
+          "value": "max-age=2592000"
+        }]
+      }, {
+        "source": "**/*.@(css|js)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=86400"
         }]
       }, {
         "source": "404.html",

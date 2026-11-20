@@ -29,10 +29,11 @@
     <title>Sugandha Enterprises</title>
     <link rel="manifest" href="./manifest.json">
     <link rel="author" href="./humans.txt"/>
-    <link rel='dns-prefetch' href='http://fonts.googleapis.com/'/>
-    <link rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C800%2C800i&amp;subset=latin%2Clatin-ext'
-          type='text/css' media='all'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin,latin-ext&amp;display=swap"
+          type="text/css" media="all"/>
     <link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/additional-style.css' type='text/css' media='all'/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -129,7 +130,11 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand mobile-logo" href="#">
-                        <img src="images/logo.png" alt="Logo" class="mobile-logo"/>
+                        <picture>
+                            <source type="image/avif" srcset="images/logo.avif">
+                            <source type="image/webp" srcset="images/logo.webp">
+                            <img src="images/logo.png" alt="Sugandha Enterprises Logo" class="mobile-logo" width="150" height="150"/>
+                        </picture>
                     </a>
 
                 </div>
@@ -148,8 +153,13 @@
                                                                                                 href="./projects.html">Projects</a>&nbsp;&nbsp;&nbsp;
                         </li>
                     </ul>
-                    <a class="navbar-brand desktop" href="."><img src="images/logo/launcher-icon-2x.png" alt="Logo"
-                                                                  class="desktop-logo"/></a>
+                    <a class="navbar-brand desktop" href=".">
+                        <picture>
+                            <source type="image/avif" srcset="images/logo/launcher-icon-2x.avif">
+                            <source type="image/webp" srcset="images/logo/launcher-icon-2x.webp">
+                            <img src="images/logo/launcher-icon-2x.png" alt="Sugandha Enterprises Logo" class="desktop-logo" width="96" height="96"/>
+                        </picture>
+                    </a>
                     <ul id="menu-right-menu" class="nav navbar-nav">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a title="Our Clients"
                                                                                                 href="clients.html">Our
@@ -171,7 +181,7 @@
     <!-- Banner Section -->
     <section class="banner-section">
         <div id="banner-slider" class="owl-carousel owl-theme">
-            <div class="slide-item full-height-section" style="background-image: url(images/slide-1.jpg)">
+            <div class="slide-item full-height-section slide-1">
                 <div class="slide-content">
                     <div class="coll-middle add_slide">
                         <div class="inner">
@@ -181,7 +191,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-item full-height-section" style="background-image: url(images/slide-2.jpg)">
+            <div class="slide-item full-height-section slide-2">
                 <div class="slide-content">
                     <div class="coll-middle add_slide">
                         <div class="inner">
@@ -191,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-item full-height-section" style="background-image: url(images/slide-3.jpg)">
+            <div class="slide-item full-height-section slide-3">
                 <div class="slide-content">
                     <div class="coll-middle add_slide">
                         <div class="inner">
@@ -221,7 +231,11 @@
                             </div>
                         </div>
                     </div>
-                    <img src="images/about-1.jpg" alt=""/>
+                    <picture>
+                        <source type="image/avif" srcset="images/about-1.avif">
+                        <source type="image/webp" srcset="images/about-1.webp">
+                        <img src="images/about-1.jpg" alt="Empowerment at Sugandha Enterprises" width="432" height="284" loading="lazy" decoding="async"/>
+                    </picture>
                 </article>
             </li>
             <li>
@@ -236,7 +250,11 @@
                             </div>
                         </div>
                     </div>
-                    <img src="images/about-2.jpg" alt=""/>
+                    <picture>
+                        <source type="image/avif" srcset="images/about-2.avif">
+                        <source type="image/webp" srcset="images/about-2.webp">
+                        <img src="images/about-2.jpg" alt="Our Vision - Specialists of Underground EHV Transmission" width="432" height="284" loading="lazy" decoding="async"/>
+                    </picture>
                 </article>
             </li>
             <li>
@@ -255,7 +273,11 @@
                             </div>
                         </div>
                     </div>
-                    <img src="images/about-3.jpg" alt=""/>
+                    <picture>
+                        <source type="image/avif" srcset="images/about-3.avif">
+                        <source type="image/webp" srcset="images/about-3.webp">
+                        <img src="images/about-3.jpg" alt="Winning Against All Odds - Sugandha Enterprises" width="432" height="284" loading="lazy" decoding="async"/>
+                    </picture>
                 </article>
             </li>
         </ul>
@@ -289,7 +311,11 @@
                 </div>
                 <div class="col-sm-5">
                     <div class="founder_content_card img">
-                        <img src="images/cables.jpg" class="img-reponsive"/>
+                        <picture>
+                            <source type="image/avif" srcset="images/cables.avif">
+                            <source type="image/webp" srcset="images/cables.webp">
+                            <img src="images/cables.jpg" class="img-reponsive" alt="Underground Cable Laying and EHV Projects" width="700" height="530" loading="lazy" decoding="async"/>
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -308,7 +334,11 @@
                     </div>
                     <div class='col-sm-3'>
                         <div class="binta_content_card img">
-                            <img src="images/founder.jpg" class="img-reponsive" style="margin: auto;">
+                            <picture>
+                                <source type="image/avif" srcset="images/founder.avif">
+                                <source type="image/webp" srcset="images/founder.webp">
+                                <img src="images/founder.jpg" class="img-reponsive" alt="Mr. D.K. Singh, Founder of Sugandha Enterprises" style="margin: auto;" width="257" height="329" loading="lazy" decoding="async"/>
+                            </picture>
                         </div>
                     </div>
                     <div class="col-sm-1">
