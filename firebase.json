@@ -2,10 +2,10 @@
   "hosting": {
     "public": "public",
     "ignore": [
-        "desktop.ini",
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
+      "desktop.ini",
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
     "headers": [
       {
@@ -20,27 +20,45 @@
             "value": "max-age=31536000, immutable"
           }
         ]
-      }, {
+      },
+      {
         "source": "**/*.@(jpg|jpeg|gif|png|webp|avif|svg|ico)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=2592000"
-        }]
-      }, {
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(css|js)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=86400"
-        }]
-      }, {
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html|txt|xml|json)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600, must-revalidate"
+          }
+        ]
+      },
+      {
         "source": "404.html",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=300"
-        }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          }
+        ]
       }
     ],
-      "cleanUrls": true,
-      "trailingSlash": false
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }

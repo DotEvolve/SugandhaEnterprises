@@ -452,6 +452,30 @@ picture img {
     background-image: image-set(url("../images/cable.avif") type("image/avif"), url("../images/cable.webp") type("image/webp"), url("../images/cable.jpg") type("image/jpeg"));
 }
 
+/* Mobile responsive banner & parallax slides (<= 767px) */
+@media (max-width: 767px) {
+    .banner-section .slide-item.slide-1 {
+        background-image: url(../images/slide-1-mobile.jpg);
+        background-image: -webkit-image-set(url("../images/slide-1-mobile.avif") type("image/avif"), url("../images/slide-1-mobile.webp") type("image/webp"), url("../images/slide-1-mobile.jpg") type("image/jpeg"));
+        background-image: image-set(url("../images/slide-1-mobile.avif") type("image/avif"), url("../images/slide-1-mobile.webp") type("image/webp"), url("../images/slide-1-mobile.jpg") type("image/jpeg"));
+    }
+    .banner-section .slide-item.slide-2 {
+        background-image: url(../images/slide-2-mobile.jpg);
+        background-image: -webkit-image-set(url("../images/slide-2-mobile.avif") type("image/avif"), url("../images/slide-2-mobile.webp") type("image/webp"), url("../images/slide-2-mobile.jpg") type("image/jpeg"));
+        background-image: image-set(url("../images/slide-2-mobile.avif") type("image/avif"), url("../images/slide-2-mobile.webp") type("image/webp"), url("../images/slide-2-mobile.jpg") type("image/jpeg"));
+    }
+    .banner-section .slide-item.slide-3 {
+        background-image: url(../images/slide-3-mobile.jpg);
+        background-image: -webkit-image-set(url("../images/slide-3-mobile.avif") type("image/avif"), url("../images/slide-3-mobile.webp") type("image/webp"), url("../images/slide-3-mobile.jpg") type("image/jpeg"));
+        background-image: image-set(url("../images/slide-3-mobile.avif") type("image/avif"), url("../images/slide-3-mobile.webp") type("image/webp"), url("../images/slide-3-mobile.jpg") type("image/jpeg"));
+    }
+    .programmers_section .parallax {
+        background-image: url("../images/cable-mobile.jpg");
+        background-image: -webkit-image-set(url("../images/cable-mobile.avif") type("image/avif"), url("../images/cable-mobile.webp") type("image/webp"), url("../images/cable-mobile.jpg") type("image/jpeg"));
+        background-image: image-set(url("../images/cable-mobile.avif") type("image/avif"), url("../images/cable-mobile.webp") type("image/webp"), url("../images/cable-mobile.jpg") type("image/jpeg"));
+    }
+}
+
 /* Prevent layout shift (CLS) for banner slider */
 .banner-section {
     min-height: 480px;

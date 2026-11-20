@@ -1,0 +1,41 @@
+# Caching headers for Cloudflare / Netlify
+
+# Fonts
+/*.eot
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+/*.woff
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+/*.woff2
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+/*.ttf
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=31536000, immutable
+
+# Images and Media
+/*.jpg
+  Cache-Control: max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: max-age=31536000, immutable
+/*.png
+  Cache-Control: max-age=31536000, immutable
+/*.webp
+  Cache-Control: max-age=31536000, immutable
+/*.avif
+  Cache-Control: max-age=31536000, immutable
+/*.svg
+  Cache-Control: max-age=31536000, immutable
+/*.ico
+  Cache-Control: max-age=31536000, immutable
+
+# CSS and JavaScript
+/*.css
+  Cache-Control: max-age=31536000, immutable
+/*.js
+  Cache-Control: max-age=31536000, immutable
+
+# HTML Pages
+/*.html
+  Cache-Control: max-age=3600, must-revalidate
