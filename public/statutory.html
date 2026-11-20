@@ -498,17 +498,9 @@
 </div>
 <!-- Wrapper End -->
 
-<!-- Firebase -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.6.1/firebase-app.js"></script>
-
-<script src="/__/firebase/8.6.1/firebase-performance.js"></script>
-<script src="/__/firebase/8.6.1/firebase-storage.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-
 <script>
+    const DOCS_BASE_URL = '{{DOCS_BASE_URL}}';
+
     window.onload = function() {
         loadYears();
     };
@@ -531,8 +523,6 @@
     const today_date = new Date();
     const current_year = today_date.getFullYear();
     const current_month = today_date.getMonth() + 1;
-
-    const storage = firebase.storage();
 
     function loadYears() {
 
@@ -599,151 +589,53 @@
         }
     }
 
-    function updateUrl() {
+    function checkAndSetDoc(subPath, downloadId, linkId, loadingId) {
+        const url = DOCS_BASE_URL + '/' + subPath;
+        const doc = document.getElementById(linkId);
+        const downloadBtn = document.getElementById(downloadId);
+        const loadingElem = document.getElementById(loadingId);
 
+        fetch(url, { method: 'HEAD' })
+            .then(function(response) {
+                if (response.ok) {
+                    doc.href = url;
+                    downloadBtn.style.display = "inline";
+                    loadingElem.style.visibility = "hidden";
+                } else {
+                    loadingElem.style.visibility = "visible";
+                    loadingElem.innerHTML = "NA";
+                }
+            })
+            .catch(function(err) {
+                loadingElem.style.visibility = "visible";
+                loadingElem.innerHTML = "NA";
+            });
+    }
+
+    function updateUrl() {
         const year = document.getElementById("year").value;
         const month = document.getElementById("month").value;
 
-        const epfChallanPath = 'statutory/' + year + '/' + month + '/EPF-Challan-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const epfEcrPath = 'statutory/' + year + '/' + month + '/EPF-ECR-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const esicChallanPath = 'statutory/' + year + '/' + month + '/ESIC-Challan-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const esicEcrPath = 'statutory/' + year + '/' + month + '/ESIC-ECR-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
-        const tpddlWagePath = 'statutory/' + year + '/' + month + '/TPDDL-Wage-' + monthsOfYear[parseInt(month)] + '-' + year + '.pdf';
+        const monthName = monthsOfYear[parseInt(month, 10)];
+        const basePath = 'statutory/' + year + '/' + month;
 
-        const epfChallanRef = storage.ref(epfChallanPath);
-        const epfEcrRef = storage.ref(epfEcrPath);
-        const esicChallanRef = storage.ref(esicChallanPath);
-        const esicEcrRef = storage.ref(esicEcrPath);
-        const tpddlWageRef = storage.ref(tpddlWagePath);
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById('download' + i).style.display = "none";
+            const loading = document.getElementById('loading' + i);
+            loading.style.visibility = "visible";
+            loading.innerHTML = 'Loading...';
+        }
 
-        document.getElementById('download1').style.display = "none";
-        document.getElementById('download2').style.display = "none";
-        document.getElementById('download3').style.display = "none";
-        document.getElementById('download4').style.display = "none";
-        document.getElementById('download5').style.display = "none";
-
-        document.getElementById('loading1').style.visibility = "visible";
-        document.getElementById('loading2').style.visibility = "visible";
-        document.getElementById('loading3').style.visibility = "visible";
-        document.getElementById('loading4').style.visibility = "visible";
-        document.getElementById('loading5').style.visibility = "visible";
-
-        document.getElementById('loading1').innerHTML = 'Loading...';
-        document.getElementById('loading2').innerHTML = 'Loading...';
-        document.getElementById('loading3').innerHTML = 'Loading...';
-        document.getElementById('loading4').innerHTML = 'Loading...';
-        document.getElementById('loading5').innerHTML = 'Loading...';
-
-        epfChallanRef.getDownloadURL().then(function (url) {
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = function (event) {
-                const blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-
-            const doc = document.getElementById('epfChallan');
-            doc.href = url;
-            if (document.getElementById('download1').style.display === "none") {
-                document.getElementById('download1').style.display = "inline";
-                document.getElementById('loading1').style.visibility = "hidden";
-            }
-        }).catch(function (error) {
-            const doc = document.getElementById('loading1');
-            doc.style.visibility = "visible";
-            doc.innerHTML = "NA";
-        });
-
-        epfEcrRef.getDownloadURL().then(function (url) {
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = function (event) {
-                const blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-
-            const doc = document.getElementById('epfEcr');
-            doc.href = url;
-            if (document.getElementById('download2').style.display === "none") {
-                document.getElementById('download2').style.display = "inline";
-                document.getElementById('loading2').style.visibility = "hidden";
-            }
-        }).catch(function (error) {
-            const doc = document.getElementById('loading2');
-            doc.style.visibility = "visible";
-            doc.innerHTML = "NA";
-        });
-
-        esicChallanRef.getDownloadURL().then(function (url) {
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = function (event) {
-                const blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-
-            const doc = document.getElementById('esicChallan');
-            doc.href = url;
-            if (document.getElementById('download3').style.display === "none") {
-                document.getElementById('download3').style.display = "inline";
-                document.getElementById('loading3').style.visibility = "hidden";
-            }
-        }).catch(function (error) {
-            const doc = document.getElementById('loading3');
-            doc.style.visibility = "visible";
-            doc.innerHTML = "NA";
-        });
-
-        esicEcrRef.getDownloadURL().then(function (url) {
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = function (event) {
-                var blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-
-            const doc = document.getElementById('esicEcr');
-            doc.href = url;
-            if (document.getElementById('download4').style.display === "none") {
-                document.getElementById('download4').style.display = "inline";
-                document.getElementById('loading4').style.visibility = "hidden";
-            }
-        }).catch(function (error) {
-            const doc = document.getElementById('loading4');
-            doc.style.visibility = "visible";
-            doc.innerHTML = "NA";
-        });
-
-        tpddlWageRef.getDownloadURL().then(function (url) {
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = function (event) {
-                const blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-
-            const doc = document.getElementById('tpddlWage');
-            doc.href = url;
-            if (document.getElementById('download5').style.display === "none") {
-                document.getElementById('download5').style.display = "inline";
-                document.getElementById('loading5').style.visibility = "hidden";
-            }
-        }).catch(function (error) {
-            const doc = document.getElementById('loading5');
-            doc.style.visibility = "visible";
-            doc.innerHTML = "NA";
-        });
+        checkAndSetDoc(basePath + '/EPF-Challan-' + monthName + '-' + year + '.pdf', 'download1', 'epfChallan', 'loading1');
+        checkAndSetDoc(basePath + '/EPF-ECR-' + monthName + '-' + year + '.pdf', 'download2', 'epfEcr', 'loading2');
+        checkAndSetDoc(basePath + '/ESIC-Challan-' + monthName + '-' + year + '.pdf', 'download3', 'esicChallan', 'loading3');
+        checkAndSetDoc(basePath + '/ESIC-ECR-' + monthName + '-' + year + '.pdf', 'download4', 'esicEcr', 'loading4');
+        checkAndSetDoc(basePath + '/TPDDL-Wage-' + monthName + '-' + year + '.pdf', 'download5', 'tpddlWage', 'loading5');
     }
 
     document.getElementById('year').addEventListener('change', onYearChange);
     document.getElementById('month').addEventListener('change', toUpdateUrl);
 </script>
-<!-- Firebase End -->
 <script src="./libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 
