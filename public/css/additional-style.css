@@ -55,3 +55,15 @@
     font-size: 14px !important;
   }
 }
+
+/* Defensive pre-render for carousel */
+.owl-carousel:not(.owl-loaded) {
+  display: block !important;
+}
+.owl-carousel:not(.owl-loaded) > .slide-item:not(:first-child) {
+  display: none !important;
+}
+.owl-carousel:not(.owl-loaded) > .slide-item:first-child {
+  display: block !important;
+  width: 100% !important;
+}
