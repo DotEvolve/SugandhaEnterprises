@@ -352,12 +352,14 @@
                                     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
                                         <div class="wpb_wrapper">
 
-                                            <h4>Please select Year and Month to view compliances</h4>
+                                            <h2 class="h4">Please select Year and Month to view compliances</h2>
                                             <form>
-                                                <select name="year" id="year">
+                                                <label for="year" class="sr-only">Select Year</label>
+                                                <select name="year" id="year" aria-label="Select Year">
                                                     <option value="0000">Year</option>
                                                 </select>
-                                                <select name="month" id="month">
+                                                <label for="month" class="sr-only">Select Month</label>
+                                                <select name="month" id="month" aria-label="Select Month">
                                                     <option value="00">Month</option>
                                                 </select>
                                             </form>
