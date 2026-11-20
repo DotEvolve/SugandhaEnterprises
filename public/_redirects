@@ -1,0 +1,2 @@
+# Host-level canonical redirect from apex to www
+https://sugandhaenterprises.com/* https://www.sugandhaenterprises.com/:splat 301
