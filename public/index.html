@@ -78,7 +78,41 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
-
+<!-- Loader -->
+<div id="loading" class="loading-layer">
+    <div class="coll-middle">
+        <div class="inner">
+            <div class="sk-three-bounce">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Loader End -->
+<script type="text/javascript">
+    (function () {
+        function hidePreloader() {
+            var loader = document.getElementById("loading");
+            if (loader && !loader.classList.contains("loaded")) {
+                loader.classList.add("loaded");
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 400);
+            }
+        }
+        if (document.readyState === "complete") {
+            hidePreloader();
+        } else {
+            window.addEventListener("load", hidePreloader);
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(hidePreloader, 600);
+            });
+        }
+        setTimeout(hidePreloader, 1500);
+    })();
+</script>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -204,9 +238,9 @@
                         </div>
                     </div>
                     <picture>
-                        <source type="image/avif" srcset="images/about-1.avif">
-                        <source type="image/webp" srcset="images/about-1.webp">
-                        <img src="images/about-1.jpg" alt="Empowerment at Sugandha Enterprises" width="864" height="568" loading="eager" decoding="async"/>
+                        <source type="image/avif" srcset="images/about-1-450.avif 450w, images/about-1.avif 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw">
+                        <source type="image/webp" srcset="images/about-1-450.webp 450w, images/about-1.webp 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw">
+                        <img src="images/about-1.jpg" srcset="images/about-1-450.jpg 450w, images/about-1.jpg 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw" alt="Empowerment at Sugandha Enterprises" width="864" height="568" loading="eager" decoding="async"/>
                     </picture>
                 </article>
             </li>
@@ -223,9 +257,9 @@
                         </div>
                     </div>
                     <picture>
-                        <source type="image/avif" srcset="images/about-2.avif">
-                        <source type="image/webp" srcset="images/about-2.webp">
-                        <img src="images/about-2.jpg" alt="Our Vision - Specialists of Underground EHV Transmission" width="864" height="568" loading="lazy" decoding="async"/>
+                        <source type="image/avif" srcset="images/about-2-450.avif 450w, images/about-2.avif 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw">
+                        <source type="image/webp" srcset="images/about-2-450.webp 450w, images/about-2.webp 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw">
+                        <img src="images/about-2.jpg" srcset="images/about-2-450.jpg 450w, images/about-2.jpg 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw" alt="Our Vision - Specialists of Underground EHV Transmission" width="864" height="568" loading="lazy" decoding="async"/>
                     </picture>
                 </article>
             </li>
@@ -246,9 +280,9 @@
                         </div>
                     </div>
                     <picture>
-                        <source type="image/avif" srcset="images/about-3.avif">
-                        <source type="image/webp" srcset="images/about-3.webp">
-                        <img src="images/about-3.jpg" alt="Winning Against All Odds - Sugandha Enterprises" width="864" height="568" loading="lazy" decoding="async"/>
+                        <source type="image/avif" srcset="images/about-3-450.avif 450w, images/about-3.avif 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw">
+                        <source type="image/webp" srcset="images/about-3-450.webp 450w, images/about-3.webp 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw">
+                        <img src="images/about-3.jpg" srcset="images/about-3-450.jpg 450w, images/about-3.jpg 864w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 33.3vw" alt="Winning Against All Odds - Sugandha Enterprises" width="864" height="568" loading="lazy" decoding="async"/>
                     </picture>
                 </article>
             </li>
@@ -284,9 +318,9 @@
                 <div class="col-sm-5">
                     <div class="founder_content_card img">
                         <picture>
-                            <source type="image/avif" srcset="images/cables.avif">
-                            <source type="image/webp" srcset="images/cables.webp">
-                            <img src="images/cables.jpg" class="img-reponsive" alt="Underground Cable Laying and EHV Projects" width="700" height="530" loading="lazy" decoding="async"/>
+                            <source type="image/avif" srcset="images/cables-450.avif 450w, images/cables.avif 700w" sizes="(max-width: 767px) 100vw, 450px">
+                            <source type="image/webp" srcset="images/cables-450.webp 450w, images/cables.webp 700w" sizes="(max-width: 767px) 100vw, 450px">
+                            <img src="images/cables.jpg" srcset="images/cables-450.jpg 450w, images/cables.jpg 700w" sizes="(max-width: 767px) 100vw, 450px" class="img-reponsive" alt="Underground Cable Laying and EHV Projects" width="700" height="530" loading="lazy" decoding="async"/>
                         </picture>
                     </div>
                 </div>
