@@ -4,7 +4,6 @@
   "private": true,
   "description": "Sugandha Enterprises official website",
   "scripts": {
-    "build": "node scripts/build.js",
-    "sync:r2": "python3 scripts/sync-r2.py"
+    "build": "node scripts/build.js"
   }
 }
